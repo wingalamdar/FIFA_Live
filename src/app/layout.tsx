@@ -14,6 +14,9 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 export const metadata: Metadata = {
   title: "FIFA World Cup 2026 - Live Scores, News, Standings & Predictions",
   description: "Ultimate FIFA World Cup 2026 coverage. Live scores, match schedules, group standings, team stats, player profiles, AI predictions, latest news and more.",
+  other: {
+    "monetag": "3ffb7256cfecdd8f61114251e8214a19",
+  },
 };
 
 export const viewport: Viewport = {
