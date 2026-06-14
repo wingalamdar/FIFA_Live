@@ -17,9 +17,13 @@ function NewsCard({ article, index }: { article: NewsArticle; index: number }) {
       <Link href={`/news/${article.slug}`}>
         <div className="group bg-white/5 backdrop-blur-xl rounded-xl border border-white/10 overflow-hidden hover:bg-white/10 transition-all h-full flex flex-col">
           <div className="relative h-44 overflow-hidden bg-gradient-to-br from-emerald-500/20 via-black to-cyan-500/20 flex items-center justify-center">
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-            <span className="text-5xl opacity-20 group-hover:scale-110 transition-transform duration-500">⚽</span>
-            <div className="absolute top-3 left-3">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+            {article.image ? (
+              <img src={article.image} alt={article.title} className="w-full h-full object-cover absolute inset-0 group-hover:scale-110 transition-transform duration-500" />
+            ) : (
+              <span className="text-5xl opacity-20 group-hover:scale-110 transition-transform duration-500">⚽</span>
+            )}
+            <div className="absolute top-3 left-3 z-20">
               <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-400/20 text-emerald-400 border border-emerald-400/30">
                 {article.category}
               </span>

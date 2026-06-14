@@ -3,7 +3,6 @@ import HeroBanner from "@/components/home/HeroBanner";
 import CountdownWidget from "@/components/home/CountdownWidget";
 import LiveMatchWidget from "@/components/home/LiveMatchWidget";
 import TrendingTeams from "@/components/home/TrendingTeams";
-import MatchPredictions from "@/components/home/MatchPredictions";
 import NewsSection from "@/components/home/NewsSection";
 import TopScorers from "@/components/home/TopScorers";
 import GroupStandingsPreview from "@/components/home/GroupStandingsPreview";
@@ -31,7 +30,6 @@ export default function Home() {
           <MonetagAdBanner width={728} height={90} position="middle" />
         </div>
       </div>
-      <MatchPredictions />
       <UpcomingMatches />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex justify-center">

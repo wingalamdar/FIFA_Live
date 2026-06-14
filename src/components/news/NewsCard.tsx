@@ -29,9 +29,13 @@ export default function NewsCard({ article }: NewsCardProps) {
             background: `linear-gradient(135deg, ${gradientFrom}, ${gradientTo})`,
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-          <span className="text-5xl opacity-20 group-hover:scale-110 transition-transform duration-500">&#9917;</span>
-          <div className="absolute top-3 left-3 flex items-center gap-2">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+          {article.image ? (
+            <img src={article.image} alt={article.title} className="w-full h-full object-cover absolute inset-0 group-hover:scale-110 transition-transform duration-500" />
+          ) : (
+            <span className="text-5xl opacity-20 group-hover:scale-110 transition-transform duration-500">&#9917;</span>
+          )}
+          <div className="absolute top-3 left-3 flex items-center gap-2 z-20">
             <Badge variant="default" className="text-[10px] px-2 py-0.5">
               {article.category}
             </Badge>
