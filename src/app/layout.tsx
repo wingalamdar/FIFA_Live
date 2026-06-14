@@ -28,6 +28,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+      <head>
+        <script src="https://quge5.com/88/tag.min.js" data-zone="249579" async data-cfasync="false"></script>
+      </head>
       <body className="dark bg-[#0a0a0f] text-white antialiased min-h-screen flex flex-col">
         <ThemeProvider>
           <QueryProvider>
